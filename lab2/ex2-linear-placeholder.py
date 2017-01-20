@@ -26,7 +26,8 @@ for step in range(1001):
 	sess.run(train, feed_dict = {X:x_data, Y:y_data})
 	if step % 50 == 0:
 		print(step, sess.run(cost, feed_dict = {X:x_data, Y:y_data}))
-print("Maybe W = %s, b = %s.. " % (W, b))
+# print("Maybe W = %s, b = %s.. " % (W, b))
+print("Maybe W = %s, b = %s.. " % (sess.run(W), sess.run(b)))
 print(sess.run(hypothesis, feed_dict={X:5}))
 print(sess.run(hypothesis, feed_dict={X:7.5}))
 
